@@ -173,27 +173,27 @@ const Footer = () => {
   const socialLinks = [
     { 
       icon: Instagram, 
-      href: '#', 
+      href: 'https://www.instagram.com/vectrium_ventures/profilecard/?igsh=cjh0YXhrZWxmbDg5', 
       label: 'Instagram'
     },
     { 
       icon: Linkedin, 
-      href: '#', 
+      href: 'linkedin.com/company/vectrium-ventures/', 
       label: 'LinkedIn'
     },
     { 
       icon: MessageCircle, 
-      href: 'https://wa.me/1234567890', 
+      href: 'https://wa.me/918815631154', 
       label: 'WhatsApp'
     },
     { 
       icon: Phone, 
-      href: 'tel:+1234567890', 
+      href: 'tel:+918815631154', 
       label: 'Call'
     },
     { 
       icon: Mail, 
-      href: 'mailto:contact@vectrium.com', 
+      href: 'mailto:contact@vectriumventures.com', 
       label: 'Email'
     }
   ];

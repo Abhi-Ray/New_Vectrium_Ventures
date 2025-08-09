@@ -2,7 +2,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { signIn, getSession } from 'next-auth/react'
- 
+ import { Boxes } from "@/components/ui/background-boxes";
+import { cn } from "@/lib/utils";
 import { 
   Mail, 
   Lock, 
@@ -503,26 +504,11 @@ const EnhancedLoginForm = () => {
           animation: float 6s ease-in-out infinite;
         }
       `}</style>
-      <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        {/* Subtle background elements */}
-        <div className="absolute inset-0">
-          {/* Animated gradient orbs - more subtle */}
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-slate-800/10 via-slate-700/10 to-slate-600/10 rounded-full blur-3xl animate-float" />
-          <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-slate-700/10 via-slate-600/10 to-slate-800/10 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}} />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-slate-600/5 via-slate-500/5 to-slate-700/5 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}} />
-          
-          {/* Subtle grid pattern */}
-          <div 
-            className="absolute inset-0 opacity-[0.02]"
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(148, 163, 184, 0.3) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(148, 163, 184, 0.3) 1px, transparent 1px)
-              `,
-              backgroundSize: '50px 50px'
-            }}
-          />
-        </div>
+      <div className="min-h-screen relative w-full overflow-hidden bg-black flex flex-col items-center justify-center py-20">
+            <div className="absolute inset-0 w-full h-full bg-black z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+            <Boxes />
+      <div className="min-h-screen bg-black/40 text-white relative overflow-hidden w-full xl:w-2/5">
+    
 
         {/* Main container */}
         <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
@@ -760,6 +746,8 @@ const EnhancedLoginForm = () => {
           </div>
         </div>
       </div>
+      </div>
+
     </>
   )
 }

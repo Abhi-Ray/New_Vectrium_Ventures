@@ -11,7 +11,8 @@ import {
   Check,
   AlertCircle
 } from 'lucide-react'
-
+ import { Boxes } from "@/components/ui/background-boxes";
+import { cn } from "@/lib/utils";
 // Enhanced Floating Input with Aceternity-style animations
 const FloatingInput = ({ type, placeholder, value, onChange, error, icon: Icon, showPassword, togglePassword }) => {
   const [focused, setFocused] = useState(false)
@@ -259,7 +260,10 @@ const ResetPasswordPage = () => {
           animation: float 6s ease-in-out infinite;
         }
       `}</style>
-      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        <div className="min-h-screen relative w-full overflow-hidden bg-black flex flex-col items-center justify-center py-20">
+                  <div className="absolute inset-0 w-full h-full bg-black z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+                  <Boxes />
+      <div className="min-h-screen bg-black/40 text-white relative overflow-hidden w-full xl:w-2/5">
         {/* Subtle background elements */}
         <div className="absolute inset-0">
           {/* Animated gradient orbs - more subtle */}
@@ -350,6 +354,8 @@ const ResetPasswordPage = () => {
           </div>
         </div>
       </div>
+      </div>
+
     </>
   )
 }

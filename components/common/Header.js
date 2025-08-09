@@ -4,7 +4,7 @@ import { Menu, X, User, LogOut, Settings, BarChart3, Shield, CreditCard } from '
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import * as THREE from 'three';
-
+import Link from 'next/link';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -112,7 +112,7 @@ const Header = () => {
     { name: 'AI Agents', href: '#' },
     { name: 'Career', href: '#' },
     { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' }
+    { name: 'Contact', href: '/contact' }
   ];
 
   const handleLogin = () => {
@@ -159,7 +159,7 @@ const Header = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-2">
               {navLinks.map((link, index) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   ref={el => navRefs.current[index] = el}
@@ -170,7 +170,7 @@ const Header = () => {
                   }}
                 >
                   <span className="relative z-10">{link.name}</span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
