@@ -106,12 +106,12 @@ const Header = () => {
   }, [isDropdownOpen]);
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'AI Tools', href: '#' },
-    { name: 'Automation', href: '#' },
-    { name: 'AI Agents', href: '#' },
-    { name: 'Career', href: '#' },
-    { name: 'About', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'AI Tools', href: '/ai-tools' },
+    { name: 'Automation', href: '/automation' },
+    { name: 'AI Agents', href: '/ai-agents' },
+    { name: 'Career', href: '/career' },
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
 

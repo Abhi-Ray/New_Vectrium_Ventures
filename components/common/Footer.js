@@ -200,14 +200,14 @@ const Footer = () => {
 
   const footerLinks = {
     'Company': [
-      { name: 'About', href: '#' },
-      { name: 'Career', href: '#' },
-      { name: 'Contact', href: '#' }
+      { name: 'About', href: '/about' },
+      { name: 'Career', href: '/career' },
+      { name: 'Contact', href: '/contact' }
     ],
     'Products': [
-      { name: 'AI Tools', href: '#' },
-      { name: 'Automation', href: '#' },
-      { name: 'AI Agents', href: '#' }
+      { name: 'AI Tools', href: '/ai-tools' },
+      { name: 'Automation', href: '/automation' },
+      { name: 'AI Agents', href: '/ai-agents' }
     ],
     'Legal': [
       { name: 'Privacy Policy', href: '/privacy' },
