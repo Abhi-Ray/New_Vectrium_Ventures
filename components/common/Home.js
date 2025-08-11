@@ -3,6 +3,7 @@ import React from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import AIChat from "./AIChat";
 
+
 export function Home() {
   return (
     <div className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased p-4">
@@ -16,10 +17,11 @@ export function Home() {
             Powerful AI tools, agentic automation, and smart agents working together to simplify your tasks and boost results.
           </p>
         </div>
+      <BackgroundBeams />
+
       </div>
       <AIChat />
-      
-      <BackgroundBeams />
+    
     </div>
   );
 }

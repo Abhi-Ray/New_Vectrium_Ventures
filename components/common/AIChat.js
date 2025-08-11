@@ -48,11 +48,12 @@ export default function ChatPage() {
   }, [messages, loading]);
 
   return (
-    <div className="min-h-screen bg-transparent flex items-center justify-center w-full">
+    <div className="min-h-screen bg-transparent flex items-start justify-center w-full">
+      
       <div className="w-full  max-w-4xl relative z-10 ">
         
         {/* Chat Window */}
-        <div className="mb-6 p-6 rounded-2xl h-96 overflow-y-auto overflow-x-hidden bg-transparent relative">
+        <div className="mb-6 p-6 min-h-[65vh] rounded-2xl h-96 overflow-y-auto overflow-x-hidden bg-transparent relative">
           <div className="absolute inset-0 rounded-2xl bg-transparent pointer-events-none"></div>
 
           <div className="relative z-10 space-y-4">
