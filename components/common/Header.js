@@ -58,27 +58,34 @@ const Header = () => {
     // Initialize 3D login button effect
     if (loginButtonRef.current) {
       const button = loginButtonRef.current;
-      
+    
       const handleMouseEnter = () => {
-        button.style.transform = 'perspective(1000px) rotateX(-8deg) rotateY(8deg) translateZ(15px) scale(1.05)';
+        button.style.transform =
+          'perspective(1000px) rotateX(-8deg) rotateY(8deg) translateZ(15px) scale(1.05)';
         button.style.boxShadow = `
-          0 10px 25px rgba(59, 130, 246, 0.3),
-          0 0 30px rgba(59, 130, 246, 0.2),
-          inset 0 1px 0 rgba(255, 255, 255, 0.2),
-          inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+          0 10px 25px rgba(255, 255, 255, 0.15),
+          0 0 30px rgba(255, 255, 255, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1),
+          inset 0 -1px 0 rgba(0, 0, 0, 0.3)
         `;
-        button.style.background = 'linear-gradient(135deg, #3b82f6, #6366f1, #8b5cf6)';
+        button.style.background = 'rgba(0, 0, 0, 0.3)';
+        button.style.backdropFilter = 'blur(10px)';
+        button.style.border = '1px solid rgba(255, 255, 255, 0.1)';
       };
-
+    
       const handleMouseLeave = () => {
-        button.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px) scale(1)';
-        button.style.boxShadow = '0 4px 15px rgba(59, 130, 246, 0.2)';
-        button.style.background = 'linear-gradient(135deg, #374151, #4b5563)';
+        button.style.transform =
+          'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px) scale(1)';
+        button.style.boxShadow = '0 4px 15px rgba(255, 255, 255, 0.05)';
+        button.style.background = 'rgba(0, 0, 0, 0.3)';
+        button.style.backdropFilter = 'blur(10px)';
+        button.style.border = '1px solid rgba(255, 255, 255, 0.1)';
       };
-
+    
       button.addEventListener('mouseenter', handleMouseEnter);
       button.addEventListener('mouseleave', handleMouseLeave);
     }
+    
   }, []);
 
   // Close mobile menu when window resizes to desktop
@@ -178,30 +185,30 @@ const Header = () => {
           {/* Desktop Auth Section */}
           <div className="hidden md:block">
             {!isLoggedIn ? (
-              <button
-                ref={loginButtonRef}
-                onClick={handleLogin}
-                className="bg-gradient-to-r from-gray-700 to-gray-600 text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 relative overflow-hidden border border-gray-600"
-                style={{ 
-                  fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif',
-                  transformStyle: 'preserve-3d',
-                  boxShadow: '0 4px 15px rgba(59, 130, 246, 0.2)'
-                }}
-              >
-                <span className="relative z-10">Login</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 transition-opacity duration-300 hover:opacity-100"></div>
-              </button>
+            <button
+            ref={loginButtonRef}
+            onClick={handleLogin}
+            className="bg-black/30 backdrop-blur-md text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 relative overflow-hidden border border-white/10 hover:bg-black/50 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+            style={{
+              fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif',
+              transformStyle: 'preserve-3d',
+              boxShadow: '0 4px 15px rgba(255, 255, 255, 0.05)'
+            }}
+          >
+            <span className="relative z-10">Login</span>
+          </button>
+          
             ) : (
               <div className="relative dropdown-container">
-                <button
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="bg-gradient-to-br from-blue-600 to-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.4)] hover:scale-110 relative overflow-hidden"
-                  style={{ transformStyle: 'preserve-3d' }}
-                  aria-label="User menu"
-                >
-                  <User size={18} className="relative z-10" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 opacity-0 transition-opacity duration-300 hover:opacity-100 rounded-full"></div>
-                </button>
+               <button
+  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+  className="bg-black/30 backdrop-blur-md border border-white/20 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-black/50 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:scale-110 relative overflow-hidden"
+  style={{ transformStyle: 'preserve-3d' }}
+  aria-label="User menu"
+>
+  <User size={18} className="relative z-10" />
+</button>
+
                 
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-3 w-64 bg-black/95 backdrop-blur-xl rounded-xl shadow-2xl border border-gray-800/50 py-2 animate-in fade-in slide-in-from-top-2 duration-200"
@@ -247,6 +254,7 @@ const Header = () => {
                     <div className="py-1">
                       <a
                         href="#"
+                        disabled
                         className="flex items-center px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-800/50 hover:text-white transition-all duration-200 group"
                         style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}
                       >
@@ -255,28 +263,15 @@ const Header = () => {
                       </a>
                       <a
                         href="#"
+                        disabled
                         className="flex items-center px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-800/50 hover:text-white transition-all duration-200 group"
                         style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}
                       >
                         <BarChart3 className="w-4 h-4 mr-3 text-gray-400 group-hover:text-green-400 transition-colors duration-200" />
                         Dashboard
                       </a>
-                      <a
-                        href="#"
-                        className="flex items-center px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-800/50 hover:text-white transition-all duration-200 group"
-                        style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}
-                      >
-                        <CreditCard className="w-4 h-4 mr-3 text-gray-400 group-hover:text-yellow-400 transition-colors duration-200" />
-                        Billing
-                      </a>
-                      <a
-                        href="#"
-                        className="flex items-center px-4 py-2.5 text-sm text-gray-300 hover:bg-gray-800/50 hover:text-white transition-all duration-200 group"
-                        style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}
-                      >
-                        <Shield className="w-4 h-4 mr-3 text-gray-400 group-hover:text-purple-400 transition-colors duration-200" />
-                        Security
-                      </a>
+                     
+                     
                     </div>
 
                     {/* Logout Section */}
@@ -373,24 +368,33 @@ const Header = () => {
               {/* Auth Section */}
               <div className="p-2">
                 {!isLoggedIn ? (
-                  <button
-                    onClick={() => {
-                      handleLogin();
-                      setIsMenuOpen(false);
-                    }}
-                    className="group w-full flex items-center justify-between px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-[1.02] relative overflow-hidden"
-                    style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}
-                  >
-                    <span className="relative z-10">Sign In</span>
-                    <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center relative z-10">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                    
-                    {/* Animated background */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </button>
+                 <button
+                 onClick={() => {
+                   handleLogin();
+                   setIsMenuOpen(false);
+                 }}
+                 className="group w-full flex items-center justify-between px-4 py-3 rounded-xl bg-black/30 backdrop-blur-md text-white font-medium transition-all duration-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:scale-[1.02] relative overflow-hidden border border-white/10"
+                 style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}
+               >
+                 <span className="relative z-10">Sign In</span>
+                 <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center relative z-10">
+                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path
+                       strokeLinecap="round"
+                       strokeLinejoin="round"
+                       strokeWidth={2}
+                       d="M9 5l7 7-7 7"
+                     />
+                   </svg>
+                 </div>
+               
+                 {/* Subtle white gradient shine */}
+                 <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent pointer-events-none" />
+               
+                 {/* Hover highlight overlay */}
+                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+               </button>
+               
                 ) : (
                   <div className="space-y-1">
                     {/* User Profile Section */}

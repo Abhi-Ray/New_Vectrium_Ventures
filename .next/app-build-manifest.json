@@ -16,20 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/api/auth/[...nextauth]/route.js"
     ],
-    "/api/chat/route": [
+    "/career/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/api/chat/route.js"
+      "static/chunks/app/career/page.js"
     ],
-    "/about/page": [
+    "/api/interns/route": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
+      "static/chunks/app/api/interns/route.js"
     ],
-    "/contact/page": [
+    "/api/job/route": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
+      "static/chunks/app/api/job/route.js"
     ],
     "/login/page": [
       "static/chunks/webpack.js",
