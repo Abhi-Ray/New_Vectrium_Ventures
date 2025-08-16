@@ -1,1 +1,23 @@
-{}
+{
+  "components/common/Globe.js -> @/components/ui/globe": {
+    "id": 59192,
+    "files": [
+      "static/chunks/b055d1fb.2a28de36d53aec5d.js",
+      "static/chunks/b536a0f1.9c4cc650df71fe15.js",
+      "static/chunks/bd904a5c.1a04c37e3084d798.js",
+      "static/chunks/5e094596.6b05a9601b7ce293.js",
+      "static/chunks/1329d575.57716429a1c9ff63.js",
+      "static/chunks/8ffc485e.a1c57daf26520f85.js",
+      "static/chunks/9144.ad22590a2932ad74.js",
+      "static/chunks/9192.8cdaaa95f6823d67.js"
+    ]
+  },
+  "node_modules/@react-three/drei/core/VideoTexture.js -> hls.js": {
+    "id": null,
+    "files": []
+  },
+  "node_modules/@react-three/drei/web/FaceLandmarker.js -> @mediapipe/tasks-vision": {
+    "id": null,
+    "files": []
+  }
+}

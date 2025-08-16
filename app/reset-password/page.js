@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { 
   Lock, 
@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
  import { Boxes } from "@/components/ui/background-boxes";
 import { cn } from "@/lib/utils";
+import {MultiStepLoaderDemo} from "@/app/loader";
 // Enhanced Floating Input with Aceternity-style animations
 const FloatingInput = ({ type, placeholder, value, onChange, error, icon: Icon, showPassword, togglePassword }) => {
   const [focused, setFocused] = useState(false)
@@ -112,7 +113,7 @@ const GradientButton = ({ children, onClick, disabled, loading, variant = 'prima
   )
 }
 
-const ResetPasswordPage = () => {
+const ResetPasswordForm = () => {
   const searchParams = useSearchParams()
   const router = useRouter()
   const token = searchParams.get('token')
@@ -357,6 +358,14 @@ const ResetPasswordPage = () => {
       </div>
 
     </>
+  )
+}
+
+const ResetPasswordPage = () => {
+  return (
+    <Suspense fallback={<MultiStepLoaderDemo />}>
+      <ResetPasswordForm />
+    </Suspense>
   )
 }
 
