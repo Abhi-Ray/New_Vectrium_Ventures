@@ -28,7 +28,7 @@ export function Career() {
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
-            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-6 py-2 text-sm lg:text-base"
+            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-4 py-2 text-sm lg:text-base"
             onClick={() => setSelected('job')}
           >
             <span>Apply for Jobs</span>
@@ -37,7 +37,7 @@ export function Career() {
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
-            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-6 py-2 text-sm lg:text-base"
+            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-4 py-2 text-sm lg:text-base"
             onClick={() => setSelected('internship')}
           >
             <span>Apply for Internship</span>

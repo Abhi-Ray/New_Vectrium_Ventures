@@ -6,11 +6,11 @@ import { WobbleCard } from "@/components/ui/wobble-card";
 export function WobbleCardDemo() {
   return (
     <div
-      className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full"
+      className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full px-4 md:px-0"
     >
       {/* First Card - AI Tools */}
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[400px] lg:min-h-[300px]"
         className=""
       >
         <div className="max-w-xs">
@@ -35,7 +35,7 @@ export function WobbleCardDemo() {
       </WobbleCard>
 
       {/* Second Card - Agentic Automation */}
-      <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+      <WobbleCard containerClassName="col-span-1 min-h-[200px] md:min-h-[300px] ">
         <h2
           className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white"
         >
@@ -49,7 +49,7 @@ export function WobbleCardDemo() {
 
       {/* Third Card - AI Agents */}
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]"
+        containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[400px] lg:min-h-[600px] xl:min-h-[300px]"
       >
         <div className="max-w-sm">
           <h2

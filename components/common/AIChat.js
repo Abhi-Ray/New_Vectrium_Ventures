@@ -48,7 +48,7 @@ export default function ChatPage() {
   }, [messages, loading]);
 
   return (
-    <div className="min-h-screen bg-transparent flex items-start justify-center w-full">
+    <div className=" bg-transparent flex items-start justify-center w-full">
       
       <div className="w-full  max-w-4xl relative z-10 ">
         
@@ -124,7 +124,7 @@ export default function ChatPage() {
         </div>
 
         {/* Predefined Prompts - Hidden on mobile */}
-        <div className="hidden sm:flex flex-wrap gap-3 justify-center">
+        <div className="hidden sm:flex flex-wrap gap-3 justify-center mb-16">
           {predefinedPrompts.map((prompt, idx) => (
             <button
               key={idx}

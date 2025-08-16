@@ -356,7 +356,7 @@ export async function POST(req) {
     
     // Enhanced model configuration with dynamic parameters
     const modelConfig = {
-      model: "gemini-1.5-flash",
+      model: "gemini-2.5-flash-lite",
       generationConfig: {
         temperature: analysis.intent === 'technical' ? 0.3 : 0.7,
         topP: analysis.complexity === 'high' ? 0.9 : 0.85,

@@ -77,7 +77,7 @@ const VectriumAgenticPolicy = () => {
             <span className="text-gray-300 font-medium">Policy Documentation</span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+          <h1 className="text-2xl md:text-5xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
             Agentic Cancellations & Refund Policy
           </h1>
 
@@ -129,7 +129,7 @@ const VectriumAgenticPolicy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <FileText className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white">1. Introduction</h2>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white">1. Introduction</h2>
             </div>
             <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl
               p-8 border border-gray-700/30 backdrop-blur-sm">
@@ -146,7 +146,7 @@ const VectriumAgenticPolicy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Shield className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-2xl lg:text-3xl font-bold text-white">
                 2. Eligibility for Cancellation & Refund
               </h2>
             </div>
@@ -176,7 +176,7 @@ const VectriumAgenticPolicy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Bot className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-2xl lg:text-3xl font-bold text-white">
                 3. How to Request a Cancellation or Refund
               </h2>
             </div>
@@ -207,7 +207,7 @@ const VectriumAgenticPolicy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Clock className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-2xl lg:text-3xl font-bold text-white">
                 4. Processing Time & Method
               </h2>
             </div>
@@ -225,7 +225,7 @@ const VectriumAgenticPolicy = () => {
             <div className="flex items-center gap-4 mb-6">
               <AlertTriangle className="w-6 h-6 text-gray-300 p-3 rounded-xl bg-gradient-to-br
                 from-gray-700 to-gray-800" />
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-2xl lg:text-3xl font-bold text-white">
                 5. Limitations & Non-Refundable Scenarios
               </h2>
             </div>
@@ -247,7 +247,7 @@ const VectriumAgenticPolicy = () => {
             <div className="flex items-center gap-4 mb-6">
               <Scale className="w-6 h-6 text-gray-300 p-3 rounded-xl bg-gradient-to-br
                 from-gray-700 to-gray-800" />
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-2xl lg:text-3xl font-bold text-white">
                 6. Partial Refunds & Usage Deductions
               </h2>
             </div>
@@ -265,7 +265,7 @@ const VectriumAgenticPolicy = () => {
             <div className="flex items-center gap-4 mb-6">
               <Zap className="w-6 h-6 text-gray-300 p-3 rounded-xl bg-gradient-to-br
                 from-gray-700 to-gray-800" />
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-2xl lg:text-3xl font-bold text-white">
                 7. Changes to This Policy
               </h2>
             </div>
@@ -283,7 +283,7 @@ const VectriumAgenticPolicy = () => {
             <div className="flex items-center gap-4 mb-6">
               <Mail className="w-6 h-6 text-gray-300 p-3 rounded-xl bg-gradient-to-br
                 from-gray-700 to-gray-800" />
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-2xl lg:text-3xl font-bold text-white">
                 8. Contact Us
               </h2>
             </div>

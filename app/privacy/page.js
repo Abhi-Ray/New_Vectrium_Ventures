@@ -64,7 +64,7 @@ const VectriumPrivacy = () => {
             <span className="text-gray-300 font-medium">Legal Documentation</span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent" 
+          <h1 className="text-2xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent" 
               style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
             Privacy Policy
           </h1>
@@ -114,7 +114,7 @@ const VectriumPrivacy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <FileText className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 1. Introduction
               </h2>
             </div>
@@ -137,7 +137,7 @@ const VectriumPrivacy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Bot className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 2. Information We Collect
               </h2>
             </div>
@@ -159,7 +159,7 @@ const VectriumPrivacy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Shield className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 3. How We Use Your Information
               </h2>
             </div>
@@ -192,7 +192,7 @@ const VectriumPrivacy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <AlertTriangle className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 4. Data Sharing and Disclosure
               </h2>
             </div>
@@ -212,7 +212,7 @@ const VectriumPrivacy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Cpu className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 5. Data Retention
               </h2>
             </div>
@@ -232,7 +232,7 @@ const VectriumPrivacy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Scale className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 6. Your Data Protection Rights
               </h2>
             </div>
@@ -249,7 +249,7 @@ const VectriumPrivacy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Clock className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 7. Cookies and Tracking Technologies
               </h2>
             </div>
@@ -266,7 +266,7 @@ const VectriumPrivacy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Zap className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 8. Changes to This Policy
               </h2>
             </div>
@@ -283,7 +283,7 @@ const VectriumPrivacy = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Mail className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 9. Contact Us
               </h2>
             </div>
@@ -333,7 +333,7 @@ const VectriumPrivacy = () => {
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-2xl p-12 border border-gray-600/30 backdrop-blur-sm">
             <div className="max-w-3xl mx-auto">
-              <h3 className="text-3xl font-bold text-white mb-6" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 Questions about our Privacy Policy?
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">

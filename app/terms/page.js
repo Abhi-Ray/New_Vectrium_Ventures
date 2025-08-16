@@ -64,7 +64,7 @@ const VectriumTerms = () => {
             <span className="text-gray-300 font-medium">Legal Documentation</span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent" 
+          <h1 className="text-2xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent" 
               style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
             Terms and Conditions
           </h1>
@@ -114,7 +114,7 @@ const VectriumTerms = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <FileText className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 1. Acceptance of Terms
               </h2>
             </div>
@@ -137,7 +137,7 @@ const VectriumTerms = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Bot className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 2. AI Services & Tools
               </h2>
             </div>
@@ -173,7 +173,7 @@ const VectriumTerms = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Shield className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 3. User Responsibilities
               </h2>
             </div>
@@ -215,7 +215,7 @@ const VectriumTerms = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <AlertTriangle className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 4. AI Limitations & Disclaimers
               </h2>
             </div>
@@ -256,7 +256,7 @@ const VectriumTerms = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Cpu className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 5. Data & Privacy
               </h2>
             </div>
@@ -296,7 +296,7 @@ const VectriumTerms = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Scale className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 6. Intellectual Property
               </h2>
             </div>
@@ -322,7 +322,7 @@ const VectriumTerms = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Clock className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 7. Payment & Billing
               </h2>
             </div>
@@ -359,7 +359,7 @@ const VectriumTerms = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Zap className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 8. Termination
               </h2>
             </div>
@@ -381,7 +381,7 @@ const VectriumTerms = () => {
               <div className="p-3 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl">
                 <Mail className="w-6 h-6 text-gray-300" />
               </div>
-              <h2 className="text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h2 className="text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 9. Contact Information
               </h2>
             </div>
@@ -431,7 +431,7 @@ const VectriumTerms = () => {
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-2xl p-12 border border-gray-600/30 backdrop-blur-sm">
             <div className="max-w-3xl mx-auto">
-              <h3 className="text-3xl font-bold text-white mb-6" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
+              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
                 Ready to Get Started?
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
