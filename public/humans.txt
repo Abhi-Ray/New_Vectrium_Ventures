@@ -1,0 +1,15 @@
+# humans.txt file for Vectrium Ventures
+
+# Team
+
+- Lead Developer: [Abhi-Ray](https://github.com/Abhi-Ray)
+- Contact: [rayabhishek20112000@gmail.com](mailto:rayabhishek20112000@gmail.com)
+- Instagram: @abyss.ray
+- Location: India
+
+# Site
+
+- Last update: 2024-01-01
+- Standards: HTML5, CSS3, JavaScript
+- Components: Next.js, React, Tailwind CSS
+- Software: VS Code, Git, GitHub

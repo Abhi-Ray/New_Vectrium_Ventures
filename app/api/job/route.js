@@ -32,7 +32,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Upload Directory
-const uploadDir = '/Users/lord_abhi/Pictures/vv/public';
+const uploadDir = '/var/www/html/media/cv';
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
