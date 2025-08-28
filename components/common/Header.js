@@ -24,7 +24,7 @@ const Header = () => {
       const handleMouseEnter = (e) => {
         // 3D tilt effect
         element.style.transform = 'perspective(1000px) rotateX(-5deg) rotateY(5deg) translateZ(10px)';
-        element.style.transition = 'all 0.3s cubic-bezier(0.23, 1, 0.32, 1)';
+        element.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 1, 1)';
         
         // Glowing border with 3D depth
         element.style.boxShadow = `

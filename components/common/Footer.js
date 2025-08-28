@@ -178,7 +178,7 @@ const Footer = () => {
     },
     { 
       icon: Linkedin, 
-      href: 'linkedin.com/company/vectrium-ventures/', 
+      href: 'https://www.linkedin.com/company/vectrium-ventures/', 
       label: 'LinkedIn'
     },
     { 
@@ -280,12 +280,12 @@ const Footer = () => {
                   className="hidden text-white font-bold text-3xl tracking-tight mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
                   style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}
                 >
-                  Vectrium Ventures
+                  Vectrium Ventures Pvt Ltd
                 </h3>
               </a>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-6">     
               <p 
                 className="text-gray-300 text-lg leading-relaxed max-w-lg"
                 style={{ 
@@ -295,7 +295,7 @@ const Footer = () => {
                 }}
               >
                 <span className="text-white font-semibold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-                  Vectrium Ventures
+                  Vectrium Ventures Pvt Ltd
                 </span> is a next-gen tech company building powerful AI tools, automation workflows, and agentic solutions to transform the way businesses grow.
               </p>
               
@@ -402,7 +402,7 @@ const Footer = () => {
               className="text-gray-500 text-sm"
               style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}
             >
-              &copy; {new Date().getFullYear()} Vectrium Ventures. All rights reserved.
+              &copy; {new Date().getFullYear()} Vectrium Ventures Pvt Ltd. All rights reserved.
             </p>
             
             <div className="flex items-center space-x-6">
