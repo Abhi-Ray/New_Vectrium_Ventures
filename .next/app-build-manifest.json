@@ -16,20 +16,40 @@
       "static/chunks/main-app.js",
       "static/chunks/app/api/auth/[...nextauth]/route.js"
     ],
-    "/ai-agents/page": [
+    "/contact/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/ai-agents/page.js"
+      "static/chunks/app/contact/page.js"
     ],
-    "/ai-tools/page": [
+    "/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/ai-tools/page.js"
+      "static/chunks/app/about/page.js"
     ],
-    "/automation/page": [
+    "/career/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/automation/page.js"
+      "static/chunks/app/career/page.js"
+    ],
+    "/api/interns/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/interns/route.js"
+    ],
+    "/api/razorpay/order/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/razorpay/order/route.js"
+    ],
+    "/api/razorpay/verify/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/razorpay/verify/route.js"
+    ],
+    "/api/job/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/job/route.js"
     ]
   }
 }

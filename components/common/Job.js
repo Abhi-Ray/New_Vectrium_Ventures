@@ -20,6 +20,20 @@ export function Job({ value = 'job' }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
+
+
+  // Dynamically load Razorpay script
+  const loadRazorpay = () => {
+    return new Promise((resolve) => {
+      if (typeof window !== 'undefined' && window.Razorpay) return resolve(true);
+      const script = document.createElement('script');
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+      script.onload = () => resolve(true);
+      script.onerror = () => resolve(false);
+      document.body.appendChild(script);
+    });
+  };
+
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (files) {
@@ -33,34 +47,158 @@ export function Job({ value = 'job' }) {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-  
+
     try {
+      // Internship flow: take payment first, then submit application
+      if (value === 'internship') {
+        if (!formData.duration) {
+          setSubmitStatus({ type: 'error', message: 'Please select internship duration.' });
+          return;
+        }
+
+        const loaded = await loadRazorpay();
+        if (!loaded) {
+          setSubmitStatus({ type: 'error', message: 'Razorpay SDK failed to load. Please check your connection and try again.' });
+          return;
+        }
+
+        // Create order on server (authoritative pricing)
+        const orderResp = await fetch('/api/razorpay/order', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ duration: formData.duration }),
+        });
+        const orderData = await orderResp.json();
+        if (!orderResp.ok) {
+          setSubmitStatus({ type: 'error', message: orderData?.message || 'Failed to initialize payment.' });
+          return;
+        }
+
+        const options = {
+          key: orderData.keyId,
+          amount: orderData.amount, // in paise from server
+          currency: orderData.currency || 'INR',
+          order_id: orderData.orderId,
+          name: 'Vectrium Ventures Pvt. Ltd.',
+          description: `${formData.duration} Internship Registration Fee`,
+          image: "/img/logo.png",
+          theme: { 
+            color: "#000000", // Dominant black
+            backdrop_color: "linear-gradient(135deg, #000000, #0a1f44)" // Dark blue gradient
+          },
+          prefill: {
+            name: `${formData.firstname} ${formData.lastname}`.trim(),
+            email: formData.email,
+            contact: formData.phone,
+          },
+          modal: { confirm_close: true, ondismiss: () => setIsSubmitting(false) },
+          retry: { enabled: true, max_count: 2 },
+          handler: async function (rzpResponse) {
+            try {
+              // Verify signature on server
+              const verifyResp = await fetch('/api/razorpay/verify', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  orderId: rzpResponse.razorpay_order_id,
+                  paymentId: rzpResponse.razorpay_payment_id,
+                  signature: rzpResponse.razorpay_signature,
+                }),
+              });
+              const verifyData = await verifyResp.json();
+              if (!verifyResp.ok || !verifyData?.verified) {
+                setSubmitStatus({ type: 'error', message: verifyData?.message || 'Payment verification failed. If money is deducted, please contact support with your payment ID.' });
+                return;
+              }
+
+              // On successful verification, submit the application
+              const data = new FormData();
+              Object.keys(formData).forEach((key) => {
+                if (formData[key] !== null && formData[key] !== '') {
+                  data.append(key, formData[key]);
+                }
+              });
+              data.append('applicationType', value);
+              data.append('payment_amount_paise', String(orderData.amount));
+              data.append('payment_currency', orderData.currency || 'INR');
+              data.append('razorpay_payment_id', rzpResponse.razorpay_payment_id || '');
+              data.append('razorpay_order_id', rzpResponse.razorpay_order_id || '');
+              data.append('razorpay_signature', rzpResponse.razorpay_signature || '');
+
+              const response = await fetch('/api/job', {
+                method: 'POST',
+                body: data,
+              });
+
+              const result = await response.json();
+
+              if (response.ok) {
+                setSubmitStatus({
+                  type: 'success',
+                  message: result.message || "Application submitted successfully! We'll be in touch soon.",
+                });
+
+                setFormData({
+                  firstname: '',
+                  lastname: '',
+                  email: '',
+                  phone: '',
+                  portfolio: '',
+                  position: '',
+                  duration: '',
+                  resume: null,
+                  cover: '',
+                });
+
+                const fileInput = document.querySelector('input[type="file"]');
+                if (fileInput) fileInput.value = '';
+              } else {
+                setSubmitStatus({
+                  type: 'error',
+                  message: result.message || 'Failed to submit application after payment. Please contact support with your payment ID.',
+                });
+              }
+            } catch (err) {
+              console.error('Submission error after payment:', err);
+              setSubmitStatus({ type: 'error', message: 'Something went wrong while submitting your application.' });
+            } finally {
+              setIsSubmitting(false);
+            }
+          },
+        };
+
+        const rzp = new window.Razorpay(options);
+        rzp.on('payment.failed', function (resp) {
+          console.error('Payment failed:', resp.error);
+          setSubmitStatus({ type: 'error', message: resp?.error?.description || 'Payment failed. Please try again.' });
+          setIsSubmitting(false);
+        });
+        rzp.open();
+        return; // prevent falling through to job flow
+      }
+
+      // Job flow: submit directly without payment
       const data = new FormData();
-      
-      // Append all form fields
       Object.keys(formData).forEach((key) => {
-        if (formData[key] !== null && formData[key] !== "") {
+        if (formData[key] !== null && formData[key] !== '') {
           data.append(key, formData[key]);
         }
       });
-      
-      // Include application type (job vs internship)
       data.append('applicationType', value);
-  
+
       const response = await fetch("/api/job", {
         method: "POST",
         body: data,
       });
-  
+
       const result = await response.json();
-  
+
       if (response.ok) {
         setSubmitStatus({
           type: "success",
           message: result.message || "Application submitted successfully! We'll be in touch soon.",
         });
-        
-        // Reset form
+
         setFormData({
           firstname: "",
           lastname: "",
@@ -72,11 +210,9 @@ export function Job({ value = 'job' }) {
           resume: null,
           cover: "",
         });
-        
-        // Reset file input
+
         const fileInput = document.querySelector('input[type="file"]');
         if (fileInput) fileInput.value = '';
-        
       } else {
         setSubmitStatus({
           type: "error",
@@ -90,7 +226,8 @@ export function Job({ value = 'job' }) {
         message: "Network error. Please check your connection and try again.",
       });
     } finally {
-      setIsSubmitting(false);
+      // isSubmitting will be set false in handler for internship flow after API call.
+      if (value !== 'internship') setIsSubmitting(false);
     }
   };
 
@@ -225,28 +362,34 @@ export function Job({ value = 'job' }) {
               />
             </div>
 
-{/* Internship Duration - only for internships */}
-{value === 'internship' && (
-  <div className="space-y-2">
-    <label
-      htmlFor="duration"
-      className="text-gray-300 text-sm font-medium flex items-center gap-2"
-    >
-      <FileText size={16} />
-      Internship Duration
-    </label>
-    <input
-      type="text"
-      id="duration"
-      name="duration"
-      value={formData.duration || ""}
-      onChange={handleChange}
-      required
-      className="w-full px-4 py-3 bg-black/60 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-gray-500/20 focus:outline-none"
-      placeholder="e.g., 3 months"
-    />
-  </div>
-)}
+            {/* Internship Duration - only for internships */}
+            {value === 'internship' && (
+              <div className="space-y-2">
+                <label
+                  htmlFor="duration"
+                  className="text-gray-300 text-sm font-medium flex items-center gap-2"
+                >
+                  <FileText size={16} />
+                  Internship Duration
+                </label>
+                <select
+                  id="duration"
+                  name="duration"
+                  value={formData.duration}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-black/60 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-gray-500/20 focus:outline-none"
+                >
+                  <option value="" disabled>
+                    Select duration
+                  </option>
+                  <option value="1 month">1 month</option>
+                  <option value="2 months">2 months</option>
+                  <option value="3 months">3 months</option>
+                  <option value="6 months">6 months</option>
+                </select>
+              </div>
+            )}
 
             {/* Resume Upload */}
             <div className="space-y-2">

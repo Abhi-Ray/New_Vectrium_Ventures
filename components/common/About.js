@@ -7,7 +7,7 @@ export function About() {
       title: "Jan 2024 – Foundation & Early AI Exploration",
       content: (
         <div>
-          <p className="mb-4 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+          <p className="mb-4 text-xs md:text-sm text-neutral-200 dark:text-neutral-200">
             Vectrium Ventures launched focusing on AI’s potential for business transformation. Initial research and building a core team included experimenting with large language models for text generation and conversational prototypes.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -39,7 +39,7 @@ export function About() {
       title: "Jun 2024 – Development of AI Tools",
       content: (
         <div>
-          <p className="mb-4 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+          <p className="mb-4 text-xs md:text-sm text-neutral-200 dark:text-neutral-200">
             Developed internal AI-powered tools focused on data cleanup, document analysis, and content creation workflows to improve operational efficiency.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -71,7 +71,7 @@ export function About() {
       title: "Sep 2024 – First Clients & Automation Systems",
       content: (
         <div>
-          <p className="mb-4 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+          <p className="mb-4 text-xs md:text-sm text-neutral-200 dark:text-neutral-200">
             Delivered AI solutions to early clients in e-commerce and services, focusing on efficiency and accuracy. Introduced automation pipelines integrating AI tools with CRMs, analytics, and business operations.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -103,7 +103,7 @@ export function About() {
       title: "Mar 2025 – Launch of AI Agents",
       content: (
         <div>
-          <p className="mb-4 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+          <p className="mb-4 text-xs md:text-sm text-neutral-200 dark:text-neutral-200">
             Introduced autonomous multi-step AI agents managing customer queries, scheduling, and reporting with minimal oversight.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -135,7 +135,7 @@ export function About() {
       title: "Jun 2025 – Advanced Multi-Agent Collaboration",
       content: (
         <div>
-          <p className="mb-4 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+          <p className="mb-4 text-xs md:text-sm text-neutral-200 dark:text-neutral-200">
             Expanded AI capabilities to multi-agent collaboration models enabling complex task completion through teamwork among AI agents.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -167,7 +167,7 @@ export function About() {
       title: "Sep – Dec 2025 – Global Deployments & Worldwide Network",
       content: (
         <div>
-          <p className="mb-4 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+          <p className="mb-4 text-xs md:text-sm text-neutral-200 dark:text-neutral-200">
             Successfully deployed AI tools and agents across Asia, Europe, and North America supporting remote-first operations. Established a global network of AI-driven automation systems powering diverse industries worldwide.
           </p>
           <div className="grid grid-cols-2 gap-4">

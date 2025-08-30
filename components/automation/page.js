@@ -18,14 +18,14 @@ export function Automation() {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className="text-3xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
+        className="text-3xl px-4 md:text-4xl lg:text-5xl font-bold text-white-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
       >
         Experience{" "}
-        <Highlight className="text-black dark:text-white">
+        <Highlight className="text-white dark:text-white">
           Agentic Automation
         </Highlight>{" "}
         that adapts, learns, and executes complex strategies — {" "} 
-        <Highlight className="text-black dark:text-white">
+        <Highlight className="text-white dark:text-white">
         your co-founder.
         </Highlight>
 
