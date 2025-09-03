@@ -20,11 +20,11 @@ export const metadata = {
     title: "AI Careers - Join the Vectrium Ventures Team",
     description:
       "Explore exciting career opportunities in the field of AI at Vectrium Ventures. We are looking for talented individuals to join our team and shape the future of artificial intelligence.",
-    url: "https://vectriumventures.com/career",
+    url: "https://vectriumventures.in/career",
     siteName: "Vectrium Ventures",
     images: [
       {
-        url: "https://vectriumventures.com/img/logo.png",
+        url: "https://vectriumventures.in/img/logo.png",
         width: 800,
         height: 600,
       },
@@ -37,7 +37,7 @@ export const metadata = {
     title: "AI Careers - Join the Vectrium Ventures Team",
     description:
       "Explore exciting career opportunities in the field of AI at Vectrium Ventures. We are looking for talented individuals to join our team and shape the future of artificial intelligence.",
-    images: ["https://vectriumventures.com/img/logo.png"],
+    images: ["https://vectriumventures.in/img/logo.png"],
   },
 };
 
@@ -52,7 +52,7 @@ const page = () => {
             "@type": "WebPage",
             "name": "AI Careers - Join the Vectrium Ventures Team",
             "description": "Explore exciting career opportunities in the field of AI at Vectrium Ventures. We are looking for talented individuals to join our team and shape the future of artificial intelligence.",
-            "url": "https://vectriumventures.com/career"
+            "url": "https://vectriumventures.in/career"
           })
         }}
       />
@@ -67,7 +67,7 @@ const page = () => {
             "hiringOrganization": {
               "@type": "Organization",
               "name": "Vectrium Ventures",
-              "sameAs": "https://vectriumventures.com"
+              "sameAs": "https://vectriumventures.in"
             },
             "employmentType": "FULL_TIME",
             "datePosted": "2024-01-01",
@@ -97,13 +97,13 @@ const page = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://vectriumventures.com"
+                "item": "https://vectriumventures.in"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Career",
-                "item": "https://vectriumventures.com/career"
+                "item": "https://vectriumventures.in/career"
               }
             ]
           })

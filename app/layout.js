@@ -28,7 +28,7 @@ export const metadata = {
   ],
   author: "Vectrium Ventures",
   robots: "index, follow",
-  metadataBase: new URL("https://vectriumventures.com"),
+  metadataBase: new URL("https://vectriumventures.in"),
   alternates: {
     canonical: "/",
   },
@@ -36,11 +36,11 @@ export const metadata = {
     title: "Vectrium Ventures - AI Tools, AI Agents, and Agentic Automation",
     description:
       "Vectrium Ventures is a leading provider of AI tools, AI agents, and agentic automation solutions. We help businesses leverage the power of AI to drive growth and innovation.",
-    url: "https://vectriumventures.com",
+    url: "https://vectriumventures.in",
     siteName: "Vectrium Ventures",
     images: [
       {
-        url: "https://vectriumventures.com/img/logo.png",
+        url: "https://vectriumventures.in/img/logo.png",
         width: 800,
         height: 600,
       },
@@ -53,7 +53,7 @@ export const metadata = {
     title: "Vectrium Ventures - AI Tools, AI Agents, and Agentic Automation",
     description:
       "Vectrium Ventures is a leading provider of AI tools, AI agents, and agentic automation solutions. We help businesses leverage the power of AI to drive growth and innovation.",
-    images: ["https://vectriumventures.com/img/logo.png"],
+    images: ["https://vectriumventures.in/img/logo.png"],
   },
 };
 
@@ -79,8 +79,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Vectrium Ventures",
-              "url": "https://vectriumventures.com",
-              "logo": "https://vectriumventures.com/img/logo.png",
+              "url": "https://vectriumventures.in",
+              "logo": "https://vectriumventures.in/img/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-555-555-5555",
@@ -95,10 +95,10 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "url": "https://vectriumventures.com",
+              "url": "https://vectriumventures.in",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://vectriumventures.com/search?q={search_term_string}",
+                "target": "https://vectriumventures.in/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })

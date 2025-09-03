@@ -20,11 +20,11 @@ export const metadata = {
     title: "Agentic Automation Solutions for Enterprise - Vectrium Ventures",
     description:
       "Leverage the power of agentic automation with Vectrium Ventures. Our AI-driven solutions automate complex tasks, improve efficiency, and drive business process innovation.",
-    url: "https://vectriumventures.com/automation",
+    url: "https://vectriumventures.in/automation",
     siteName: "Vectrium Ventures",
     images: [
       {
-        url: "https://vectriumventures.com/img/logo.png",
+        url: "https://vectriumventures.in/img/logo.png",
         width: 800,
         height: 600,
       },
@@ -37,7 +37,7 @@ export const metadata = {
     title: "Agentic Automation Solutions for Enterprise - Vectrium Ventures",
     description:
       "Leverage the power of agentic automation with Vectrium Ventures. Our AI-driven solutions automate complex tasks, improve efficiency, and drive business process innovation.",
-    images: ["https://vectriumventures.com/img/logo.png"],
+    images: ["https://vectriumventures.in/img/logo.png"],
   },
 };
 
@@ -52,7 +52,7 @@ const page = () => {
             "@type": "WebPage",
             "name": "Agentic Automation Solutions for Enterprise - Vectrium Ventures",
             "description": "Leverage the power of agentic automation with Vectrium Ventures. Our AI-driven solutions automate complex tasks, improve efficiency, and drive business process innovation.",
-            "url": "https://vectriumventures.com/automation"
+            "url": "https://vectriumventures.in/automation"
           })
         }}
       />
@@ -81,13 +81,13 @@ const page = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://vectriumventures.com"
+                "item": "https://vectriumventures.in"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Automation",
-                "item": "https://vectriumventures.com/automation"
+                "item": "https://vectriumventures.in/automation"
               }
             ]
           })

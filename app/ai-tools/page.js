@@ -20,11 +20,11 @@ export const metadata = {
     title: "Innovative AI Tools for Business Growth - Vectrium Ventures",
     description:
       "Discover a suite of powerful AI tools from Vectrium Ventures. Our solutions are designed to enhance efficiency, foster innovation, and drive business growth.",
-    url: "https://vectriumventures.com/ai-tools",
+    url: "https://vectriumventures.in/ai-tools",
     siteName: "Vectrium Ventures",
     images: [
       {
-        url: "https://vectriumventures.com/img/logo.png",
+        url: "https://vectriumventures.in/img/logo.png",
         width: 800,
         height: 600,
       },
@@ -37,7 +37,7 @@ export const metadata = {
     title: "Innovative AI Tools for Business Growth - Vectrium Ventures",
     description:
       "Discover a suite of powerful AI tools from Vectrium Ventures. Our solutions are designed to enhance efficiency, foster innovation, and drive business growth.",
-    images: ["https://vectriumventures.com/img/logo.png"],
+    images: ["https://vectriumventures.in/img/logo.png"],
   },
 };
 
@@ -52,7 +52,7 @@ const page = () => {
             "@type": "WebPage",
             "name": "Innovative AI Tools for Business Growth - Vectrium Ventures",
             "description": "Discover a suite of powerful AI tools from Vectrium Ventures. Our solutions are designed to enhance efficiency, foster innovation, and drive business growth.",
-            "url": "https://vectriumventures.com/ai-tools"
+            "url": "https://vectriumventures.in/ai-tools"
           })
         }}
       />
@@ -81,13 +81,13 @@ const page = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://vectriumventures.com"
+                "item": "https://vectriumventures.in"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "AI Tools",
-                "item": "https://vectriumventures.com/ai-tools"
+                "item": "https://vectriumventures.in/ai-tools"
               }
             ]
           })

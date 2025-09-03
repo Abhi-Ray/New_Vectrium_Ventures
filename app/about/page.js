@@ -20,11 +20,11 @@ export const metadata = {
     title: "About Vectrium Ventures - Our Mission in AI Innovation",
     description:
       "Learn about Vectrium Ventures, our mission to democratize AI, and our vision for a future powered by intelligent automation. Discover the team behind our innovative AI solutions.",
-    url: "https://vectriumventures.com/about",
+    url: "https://vectriumventures.in/about",
     siteName: "Vectrium Ventures",
     images: [
       {
-        url: "https://vectriumventures.com/img/logo.png",
+        url: "https://vectriumventures.in/img/logo.png",
         width: 800,
         height: 600,
       },
@@ -37,7 +37,7 @@ export const metadata = {
     title: "About Vectrium Ventures - Our Mission in AI Innovation",
     description:
       "Learn about Vectrium Ventures, our mission to democratize AI, and our vision for a future powered by intelligent automation. Discover the team behind our innovative AI solutions.",
-    images: ["https://vectriumventures.com/img/logo.png"],
+    images: ["https://vectriumventures.in/img/logo.png"],
   },
 };
 
@@ -52,7 +52,7 @@ const page = () => {
             "@type": "WebPage",
             "name": "About Vectrium Ventures - Our Mission in AI Innovation",
             "description": "Learn about Vectrium Ventures, our mission to democratize AI, and our vision for a future powered by intelligent automation. Discover the team behind our innovative AI solutions.",
-            "url": "https://vectriumventures.com/about"
+            "url": "https://vectriumventures.in/about"
           })
         }}
       />
@@ -67,13 +67,13 @@ const page = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://vectriumventures.com"
+                "item": "https://vectriumventures.in"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "About",
-                "item": "https://vectriumventures.com/about"
+                "item": "https://vectriumventures.in/about"
               }
             ]
           })

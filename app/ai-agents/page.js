@@ -20,11 +20,11 @@ export const metadata = {
     title: "Advanced AI Agents for Business Automation - Vectrium Ventures",
     description:
       "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures provides intelligent agents that streamline workflows and enhance productivity.",
-    url: "https://vectriumventures.com/ai-agents",
+    url: "https://vectriumventures.in/ai-agents",
     siteName: "Vectrium Ventures",
     images: [
       {
-        url: "https://vectriumventures.com/img/logo.png",
+        url: "https://vectriumventures.in/img/logo.png",
         width: 800,
         height: 600,
       },
@@ -37,7 +37,7 @@ export const metadata = {
     title: "Advanced AI Agents for Business Automation - Vectrium Ventures",
     description:
       "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures provides intelligent agents that streamline workflows and enhance productivity.",
-    images: ["https://vectriumventures.com/img/logo.png"],
+    images: ["https://vectriumventures.in/img/logo.png"],
   },
 };
 
@@ -52,7 +52,7 @@ const page = () => {
             "@type": "WebPage",
             "name": "Advanced AI Agents for Business Automation - Vectrium Ventures",
             "description": "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures provides intelligent agents that streamline workflows and enhance productivity.",
-            "url": "https://vectriumventures.com/ai-agents"
+            "url": "https://vectriumventures.in/ai-agents"
           })
         }}
       />
@@ -81,13 +81,13 @@ const page = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://vectriumventures.com"
+                "item": "https://vectriumventures.in"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "AI Agents",
-                "item": "https://vectriumventures.com/ai-agents"
+                "item": "https://vectriumventures.in/ai-agents"
               }
             ]
           })

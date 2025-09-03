@@ -19,11 +19,11 @@ export const metadata = {
     title: "Contact Vectrium Ventures - AI Solutions and Support",
     description:
       "Contact Vectrium Ventures for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
-    url: "https://vectriumventures.com/contact",
+    url: "https://vectriumventures.in/contact",
     siteName: "Vectrium Ventures",
     images: [
       {
-        url: "https://vectriumventures.com/img/logo.png",
+        url: "https://vectriumventures.in/img/logo.png",
         width: 800,
         height: 600,
       },
@@ -36,7 +36,7 @@ export const metadata = {
     title: "Contact Vectrium Ventures - AI Solutions and Support",
     description:
       "Contact Vectrium Ventures for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
-    images: ["https://vectriumventures.com/img/logo.png"],
+    images: ["https://vectriumventures.in/img/logo.png"],
   },
 };
 
@@ -51,7 +51,7 @@ const page = () => {
             "@type": "WebPage",
             "name": "Contact Vectrium Ventures - AI Solutions and Support",
             "description": "Contact Vectrium Ventures for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
-            "url": "https://vectriumventures.com/contact"
+            "url": "https://vectriumventures.in/contact"
           })
         }}
       />
@@ -80,13 +80,13 @@ const page = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://vectriumventures.com"
+                "item": "https://vectriumventures.in"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Contact",
-                "item": "https://vectriumventures.com/contact"
+                "item": "https://vectriumventures.in/contact"
               }
             ]
           })

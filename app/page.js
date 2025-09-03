@@ -24,11 +24,11 @@ export const metadata = {
     title: "Vectrium Ventures - Top AI Tools, AI Agents, and Agentic Automation",
     description:
       "Discover top-ranking AI tools, AI agents, and agentic automation solutions from Vectrium Ventures. We provide cutting-edge AI to accelerate business growth and innovation.",
-    url: "https://vectriumventures.com",
+    url: "https://vectriumventures.in",
     siteName: "Vectrium Ventures",
     images: [
       {
-        url: "https://vectriumventures.com/img/logo.png",
+        url: "https://vectriumventures.in/img/logo.png",
         width: 800,
         height: 600,
       },
@@ -41,7 +41,7 @@ export const metadata = {
     title: "Vectrium Ventures - Top AI Tools, AI Agents, and Agentic Automation",
     description:
       "Discover top-ranking AI tools, AI agents, and agentic automation solutions from Vectrium Ventures. We provide cutting-edge AI to accelerate business growth and innovation.",
-    images: ["https://vectriumventures.com/img/logo.png"],
+    images: ["https://vectriumventures.in/img/logo.png"],
   },
 };
 
@@ -56,7 +56,7 @@ const page = () => {
             "@type": "WebPage",
             "name": "Vectrium Ventures - Top AI Tools, AI Agents, and Agentic Automation",
             "description": "Discover top-ranking AI tools, AI agents, and agentic automation solutions from Vectrium Ventures. We provide cutting-edge AI to accelerate business growth and innovation.",
-            "url": "https://vectriumventures.com"
+            "url": "https://vectriumventures.in"
           })
         }}
       />
@@ -85,7 +85,7 @@ const page = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://vectriumventures.com"
+                "item": "https://vectriumventures.in"
               }
             ]
           })

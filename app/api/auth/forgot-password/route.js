@@ -89,7 +89,7 @@ export async function POST(request) {
           <div style="margin-top: 25px; text-align: center; font-size: 12px; color: #888;">
             <p style="margin: 0;">© ${new Date().getFullYear()} Vectrium Ventures. All rights reserved.</p>
             <p style="margin: 2px 0;">Delivering AI tools, Automation, and Agentic solutions for the future.</p>
-            <a href="https://vectriumventures.com" style="color: #007bff; text-decoration: none;">Visit our website</a>
+            <a href="https://vectriumventures.in" style="color: #007bff; text-decoration: none;">Visit our website</a>
           </div>
         </div>
       `
