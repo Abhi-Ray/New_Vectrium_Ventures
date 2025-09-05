@@ -145,7 +145,7 @@ const Header = () => {
             >
               <img 
                 src="/img/logo.png" 
-                alt="Vectrium Ventures" 
+                alt="Vectrium Ventures Pvt Ltd" 
                 className="h-24 py-2 w-auto"
                 onError={(e) => {
                   // Fallback to text if image fails to load
@@ -157,7 +157,7 @@ const Header = () => {
                 className="hidden text-white font-bold text-xl tracking-tight"
                 style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}
               >
-                Vectrium Ventures
+                Vectrium Ventures Pvt Ltd
               </span>
             </a>
           </div>

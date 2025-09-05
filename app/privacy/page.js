@@ -120,7 +120,7 @@ const VectriumPrivacy = () => {
             </div>
             <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl p-8 border border-gray-700/30 backdrop-blur-sm">
               <p className="text-gray-300 leading-relaxed mb-4">
-                Welcome to Vectrium Ventures. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us.
+                Welcome to Vectrium Ventures Pvt Ltd. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
                 This Privacy Policy applies to all information collected through our Services, as well as any related services, sales, marketing or events.
@@ -317,7 +317,7 @@ const VectriumPrivacy = () => {
               <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-xl p-6 border border-blue-700/30">
                 <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                   <Bot className="w-5 h-5 text-blue-400" />
-                  Vectrium Ventures
+                  Vectrium Ventures Pvt Ltd
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   We typically respond to inquiries within 24-48 hours during business days. 
