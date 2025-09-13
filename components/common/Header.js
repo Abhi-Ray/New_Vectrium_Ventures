@@ -155,7 +155,7 @@ const Header = () => {
             >
               <img
                 src="/img/logo.png"
-                alt="Vectrium Ventures"
+                alt="Vectrium Ventures Pvt Ltd"
                 className="h-24 py-2 w-auto"
                 onError={(e) => {
                   // Fallback to text if image fails to load
