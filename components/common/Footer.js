@@ -332,7 +332,7 @@ const Footer = () => {
               >
                 <img
                   src="/img/logo.png"
-                  alt="Vectrium Ventures"
+                  alt="Vectrium Ventures Pvt Ltd"
                   className="h-24 w-auto"
                   onError={(e) => {
                     e.target.style.display = "none";
@@ -346,7 +346,7 @@ const Footer = () => {
                       "Geist Sans, system-ui, -apple-system, sans-serif",
                   }}
                 >
-                  Vectrium Ventures
+                  Vectrium Ventures Pvt Ltd
                 </h3>
               </a>
             </div>
@@ -362,7 +362,7 @@ const Footer = () => {
                 }}
               >
                 <span className="text-white font-semibold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-                  Vectrium Ventures
+                  Vectrium Ventures Pvt Ltd
                 </span>{" "}
                 is a next-gen tech company building powerful AI tools,
                 automation workflows, and agentic solutions to transform the way
@@ -487,7 +487,7 @@ const Footer = () => {
                 fontFamily: "Geist Sans, system-ui, -apple-system, sans-serif",
               }}
             >
-              &copy; {new Date().getFullYear()} Vectrium Ventures. All rights
+              &copy; {new Date().getFullYear()} Vectrium Ventures Pvt Ltd. All rights
               reserved.
             </p>
 
