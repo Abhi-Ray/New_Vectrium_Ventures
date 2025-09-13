@@ -170,7 +170,7 @@ const Header = () => {
                     "Geist Sans, system-ui, -apple-system, sans-serif",
                 }}
               >
-                Vectrium Ventures
+                Vectrium Ventures Pvt Ltd
               </span>
             </a>
           </div>
