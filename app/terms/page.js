@@ -120,7 +120,7 @@ const VectriumTerms = () => {
             </div>
             <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl p-8 border border-gray-700/30 backdrop-blur-sm">
               <p className="text-gray-300 leading-relaxed mb-4">
-                By accessing or using any services provided by Vectrium Ventures ("Company," "we," "us," or "our"), including but not limited to our AI tools, automation workflows, agentic solutions, and related services ("Services"), you ("User," "you," or "your") agree to be bound by these Terms and Conditions ("Terms").
+                By accessing or using any services provided by Vectrium Ventures Pvt Ltd ("Company," "we," "us," or "our"), including but not limited to our AI tools, automation workflows, agentic solutions, and related services ("Services"), you ("User," "you," or "your") agree to be bound by these Terms and Conditions ("Terms").
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
                 These Terms constitute a legally binding agreement between you and Vectrium Ventures. If you do not agree to these Terms, you must not access or use our Services.

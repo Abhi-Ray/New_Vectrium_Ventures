@@ -19,7 +19,7 @@ export function Career() {
         <p
           className="max-w-xl mx-auto text-sm md:text-lg text-neutral-400 dark:text-neutral-400 text-center"
         >
-          Join Vectrium Ventures to work on cutting-edge AI & automation projects,
+          Join Vectrium Ventures Pvt Ltd to work on cutting-edge AI & automation projects,
           grow your skills, and build a career with recognized credentials.
         </p>
 

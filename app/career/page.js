@@ -2,13 +2,13 @@ import React from 'react'
 import { Career } from '@/components/common/Career'
 
 export const metadata = {
-  title: "AI Careers - Join the Vectrium Ventures Team",
+  title: "AI Careers - Join the Vectrium Ventures Pvt Ltd Team",
   description:
     "Explore exciting career opportunities in the field of AI at Vectrium Ventures. We are looking for talented individuals to join our team and shape the future of artificial intelligence.",
   keywords: [
     "top AI careers",
     "AI jobs",
-    "Vectrium Ventures careers",
+    "Vectrium Ventures Pvt Ltd careers",
     "careers in artificial intelligence",
     "AI engineering jobs",
     "AI research jobs",
@@ -17,7 +17,7 @@ export const metadata = {
     canonical: "/career",
   },
   openGraph: {
-    title: "AI Careers - Join the Vectrium Ventures Team",
+    title: "AI Careers - Join the Vectrium Ventures Pvt Ltd Team",
     description:
       "Explore exciting career opportunities in the field of AI at Vectrium Ventures. We are looking for talented individuals to join our team and shape the future of artificial intelligence.",
     url: "https://vectriumventures.in/career",
@@ -34,7 +34,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Careers - Join the Vectrium Ventures Team",
+    title: "AI Careers - Join the Vectrium Ventures Pvt Ltd Team",
     description:
       "Explore exciting career opportunities in the field of AI at Vectrium Ventures. We are looking for talented individuals to join our team and shape the future of artificial intelligence.",
     images: ["https://vectriumventures.in/img/logo.png"],
@@ -50,7 +50,7 @@ const page = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "AI Careers - Join the Vectrium Ventures Team",
+            "name": "AI Careers - Join the Vectrium Ventures Pvt Ltd Team",
             "description": "Explore exciting career opportunities in the field of AI at Vectrium Ventures. We are looking for talented individuals to join our team and shape the future of artificial intelligence.",
             "url": "https://vectriumventures.in/career"
           })
@@ -63,7 +63,7 @@ const page = () => {
             "@context": "https://schema.org",
             "@type": "JobPosting",
             "title": "AI Engineer",
-            "description": "Vectrium Ventures is seeking a talented AI Engineer to join our team.",
+            "description": "Vectrium Ventures Pvt Ltd is seeking a talented AI Engineer to join our team.",
             "hiringOrganization": {
               "@type": "Organization",
               "name": "Vectrium Ventures",

@@ -2,9 +2,9 @@ import React from 'react'
 import { Contact } from '@/components/common/Contact'
 
 export const metadata = {
-  title: "Contact Vectrium Ventures - AI Solutions and Support",
+  title: "Contact Vectrium Ventures Pvt Ltd - AI Solutions and Support",
   description:
-    "Contact Vectrium Ventures for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
+    "Contact Vectrium Ventures Pvt Ltd for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
   keywords: [
     "contact Vectrium Ventures",
     "AI solutions support",
@@ -16,9 +16,9 @@ export const metadata = {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact Vectrium Ventures - AI Solutions and Support",
+    title: "Contact Vectrium Ventures Pvt Ltd - AI Solutions and Support",
     description:
-      "Contact Vectrium Ventures for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
+      "Contact Vectrium Ventures Pvt Ltd for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
     url: "https://vectriumventures.in/contact",
     siteName: "Vectrium Ventures",
     images: [
@@ -33,9 +33,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Vectrium Ventures - AI Solutions and Support",
+    title: "Contact Vectrium Ventures Pvt Ltd - AI Solutions and Support",
     description:
-      "Contact Vectrium Ventures for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
+      "Contact Vectrium Ventures Pvt Ltd for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
     images: ["https://vectriumventures.in/img/logo.png"],
   },
 };
@@ -49,8 +49,8 @@ const page = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Contact Vectrium Ventures - AI Solutions and Support",
-            "description": "Contact Vectrium Ventures for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
+            "name": "Contact Vectrium Ventures Pvt Ltd - AI Solutions and Support",
+            "description": "Contact Vectrium Ventures Pvt Ltd for inquiries about our AI tools, AI agents, and agentic automation solutions. We are here to help you with your business needs.",
             "url": "https://vectriumventures.in/contact"
           })
         }}

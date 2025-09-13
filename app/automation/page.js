@@ -10,7 +10,7 @@ export const metadata = {
     "enterprise AI automation",
     "AI business process automation",
     "intelligent automation platforms",
-    "Vectrium Ventures automation",
+    "Vectrium Ventures Pvt Ltd automation",
     "AI-driven automation solutions",
   ],
   alternates: {

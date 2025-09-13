@@ -79,7 +79,7 @@ export function Job({ value = 'job' }) {
           amount: orderData.amount, // in paise from server
           currency: orderData.currency || 'INR',
           order_id: orderData.orderId,
-          name: 'Vectrium Ventures Pvt. Ltd.',
+          name: 'Vectrium Ventures Pvt Ltd Pvt. Ltd.',
           description: `${formData.duration} Internship Registration Fee`,
           image: "/img/logo.png",
           theme: { 

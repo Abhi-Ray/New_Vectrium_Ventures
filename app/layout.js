@@ -22,11 +22,11 @@ export const metadata = {
     "AI tools",
     "AI agents",
     "agentic automation",
-    "Vectrium Ventures Pvt Ltd",
+    "Vectrium Ventures",
     "AI solutions",
     "business AI",
   ],
-  author: "Vectrium Ventures Pvt Ltd",
+  author: "Vectrium Ventures",
   robots: "index, follow",
   metadataBase: new URL("https://vectriumventures.in"),
   alternates: {
@@ -37,7 +37,7 @@ export const metadata = {
     description:
       "Vectrium Ventures Pvt Ltd is a leading provider of AI tools, AI agents, and agentic automation solutions. We help businesses leverage the power of AI to drive growth and innovation.",
     url: "https://vectriumventures.in",
-    siteName: "Vectrium Ventures Pvt Ltd",
+    siteName: "Vectrium Ventures",
     images: [
       {
         url: "https://vectriumventures.in/img/logo.png",
@@ -68,9 +68,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          <Header/>
+          <Header />
           {children}
-          <Footer/>
+          <Footer />
         </Providers>
         <script
           type="application/ld+json"
@@ -78,15 +78,15 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Vectrium Ventures Pvt Ltd",
-              "url": "https://vectriumventures.in",
-              "logo": "https://vectriumventures.in/img/logo.png",
-              "contactPoint": {
+              name: "Vectrium Ventures",
+              url: "https://vectriumventures.in",
+              logo: "https://vectriumventures.in/img/logo.png",
+              contactPoint: {
                 "@type": "ContactPoint",
-                "telephone": "+1-555-555-5555",
-                "contactType": "customer service"
-              }
-            })
+                telephone: "+1-555-555-5555",
+                contactType: "customer service",
+              },
+            }),
           }}
         />
         <script
@@ -95,13 +95,14 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "url": "https://vectriumventures.in",
-              "potentialAction": {
+              url: "https://vectriumventures.in",
+              potentialAction: {
                 "@type": "SearchAction",
-                "target": "https://vectriumventures.in/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            })
+                target:
+                  "https://vectriumventures.in/search?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
           }}
         />
       </body>

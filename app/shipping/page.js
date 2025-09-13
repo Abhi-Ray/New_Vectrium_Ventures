@@ -60,7 +60,7 @@ const VectriumShipping = () => {
           </h1>
 
           <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed mb-8" style={{ fontFamily: 'Geist Sans, system-ui, -apple-system, sans-serif' }}>
-            This Shipping Policy outlines how Vectrium Ventures delivers its AI tools, automation solutions, and AI agents to our clients.
+            This Shipping Policy outlines how Vectrium Ventures Pvt Ltd delivers its AI tools, automation solutions, and AI agents to our clients.
           </p>
 
           <div className="text-sm text-gray-500">
@@ -97,7 +97,7 @@ const VectriumShipping = () => {
           <section id="introduction" className="slide-in">
             <h2 className="text-2xl lg:text-3xl font-bold mb-4 flex items-center gap-3"><FileText className="w-6 h-6 text-gray-300" /> 1. Introduction</h2>
             <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-8 rounded-2xl border border-gray-700/30">
-              <p className="text-gray-300">Vectrium Ventures delivers AI-powered tools, automation solutions, and AI agents primarily through digital means. This policy details the timelines, methods, and conditions for order processing and delivery.</p>
+              <p className="text-gray-300">Vectrium Ventures Pvt Ltd delivers AI-powered tools, automation solutions, and AI agents primarily through digital means. This policy details the timelines, methods, and conditions for order processing and delivery.</p>
             </div>
           </section>
 

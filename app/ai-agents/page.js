@@ -4,7 +4,7 @@ import { AIAgent } from '@/components/AIAgent/page'
 export const metadata = {
   title: "Advanced AI Agents for Business Automation - Vectrium Ventures",
   description:
-    "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures provides intelligent agents that streamline workflows and enhance productivity.",
+    "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures Pvt Ltd provides intelligent agents that streamline workflows and enhance productivity.",
   keywords: [
     "advanced AI agents",
     "intelligent automation agents",
@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: "Advanced AI Agents for Business Automation - Vectrium Ventures",
     description:
-      "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures provides intelligent agents that streamline workflows and enhance productivity.",
+      "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures Pvt Ltd provides intelligent agents that streamline workflows and enhance productivity.",
     url: "https://vectriumventures.in/ai-agents",
     siteName: "Vectrium Ventures",
     images: [
@@ -36,7 +36,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Advanced AI Agents for Business Automation - Vectrium Ventures",
     description:
-      "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures provides intelligent agents that streamline workflows and enhance productivity.",
+      "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures Pvt Ltd provides intelligent agents that streamline workflows and enhance productivity.",
     images: ["https://vectriumventures.in/img/logo.png"],
   },
 };
@@ -51,7 +51,7 @@ const page = () => {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Advanced AI Agents for Business Automation - Vectrium Ventures",
-            "description": "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures provides intelligent agents that streamline workflows and enhance productivity.",
+            "description": "Explore our advanced AI agents designed to automate complex business processes. Vectrium Ventures Pvt Ltd provides intelligent agents that streamline workflows and enhance productivity.",
             "url": "https://vectriumventures.in/ai-agents"
           })
         }}

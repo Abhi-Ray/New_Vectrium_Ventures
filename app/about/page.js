@@ -2,7 +2,7 @@ import React from 'react'
 import { About } from '@/components/common/About'
 
 export const metadata = {
-  title: "About Vectrium Ventures - Our Mission in AI Innovation",
+  title: "About Vectrium Ventures Pvt Ltd - Our Mission in AI Innovation",
   description:
     "Learn about Vectrium Ventures, our mission to democratize AI, and our vision for a future powered by intelligent automation. Discover the team behind our innovative AI solutions.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata = {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Vectrium Ventures - Our Mission in AI Innovation",
+    title: "About Vectrium Ventures Pvt Ltd - Our Mission in AI Innovation",
     description:
       "Learn about Vectrium Ventures, our mission to democratize AI, and our vision for a future powered by intelligent automation. Discover the team behind our innovative AI solutions.",
     url: "https://vectriumventures.in/about",
@@ -34,7 +34,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Vectrium Ventures - Our Mission in AI Innovation",
+    title: "About Vectrium Ventures Pvt Ltd - Our Mission in AI Innovation",
     description:
       "Learn about Vectrium Ventures, our mission to democratize AI, and our vision for a future powered by intelligent automation. Discover the team behind our innovative AI solutions.",
     images: ["https://vectriumventures.in/img/logo.png"],
@@ -50,7 +50,7 @@ const page = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "About Vectrium Ventures - Our Mission in AI Innovation",
+            "name": "About Vectrium Ventures Pvt Ltd - Our Mission in AI Innovation",
             "description": "Learn about Vectrium Ventures, our mission to democratize AI, and our vision for a future powered by intelligent automation. Discover the team behind our innovative AI solutions.",
             "url": "https://vectriumventures.in/about"
           })

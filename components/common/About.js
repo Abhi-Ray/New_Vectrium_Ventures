@@ -8,7 +8,7 @@ export function About() {
       content: (
         <div>
           <p className="mb-4 text-xs md:text-sm text-neutral-200 dark:text-neutral-200">
-            Vectrium Ventures launched focusing on AI’s potential for business transformation. Initial research and building a core team included experimenting with large language models for text generation and conversational prototypes.
+            Vectrium Ventures Pvt Ltd launched focusing on AI’s potential for business transformation. Initial research and building a core team included experimenting with large language models for text generation and conversational prototypes.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
