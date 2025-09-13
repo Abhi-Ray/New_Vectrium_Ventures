@@ -22,7 +22,7 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Vectrium Ventures Pvt Ltd - Top AI Tools, AI Agents, and Agentic Automation",
+      "Vectrium Ventures Pvt Ltd",
     description:
       "Discover top-ranking AI tools, AI agents, and agentic automation solutions from Vectrium Ventures Pvt Ltd. We provide cutting-edge AI to accelerate business growth and innovation.",
     url: "https://vectriumventures.in",
@@ -40,7 +40,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Vectrium Ventures Pvt Ltd - Top AI Tools, AI Agents, and Agentic Automation",
+      "Vectrium Ventures Pvt Ltd",
     description:
       "Discover top-ranking AI tools, AI agents, and agentic automation solutions from Vectrium Ventures Pvt Ltd. We provide cutting-edge AI to accelerate business growth and innovation.",
     images: ["https://vectriumventures.in/img/logo.png"],
