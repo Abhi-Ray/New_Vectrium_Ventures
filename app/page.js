@@ -5,7 +5,7 @@ import { FeaturesSectionDemo } from "@/components/common/Feature";
 import { ThreeDMarqueeDemoSecond } from "@/components/common/CallToAction";
 
 export const metadata = {
-  title: "Vectrium Ventures Pvt Ltd - Top AI Tools, AI Agents, and Agentic Automation",
+  title: "Vectrium Ventures Pvt Ltd",
   description:
     "Discover top-ranking AI tools, AI agents, and agentic automation solutions from Vectrium Ventures Pvt Ltd. We provide cutting-edge AI to accelerate business growth and innovation.",
   keywords: [
