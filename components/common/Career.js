@@ -25,14 +25,14 @@ export function Career() {
 
         {/* Buttons Row */}
         <div className="flex gap-4 mt-6">
-          <HoverBorderGradient
+          {/* <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
             className="dark:bg-black bg-black text-white dark:text-white flex items-center space-x-2 px-4 py-2 text-sm lg:text-base"
             onClick={() => setSelected('job')}
           >
             <span>Apply for Jobs</span>
-          </HoverBorderGradient>
+          </HoverBorderGradient> */}
 
           <HoverBorderGradient
             containerClassName="rounded-full"
