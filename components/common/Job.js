@@ -333,7 +333,6 @@ export function Job({ value = 'job' }) {
                 type="url"
                 name="portfolio"
                 value={formData.portfolio}
-                required
 
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-black/60 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-gray-500/20 focus:outline-none"
