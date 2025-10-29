@@ -65,7 +65,6 @@ ABOUT VECTRIUM VENTURES PRIVATE LIMITED:
 LEADERSHIP TEAM:
 - Founder & CEO: Abhishek Ray
   * Email: abhishek@vectriumventures.com
-  * LinkedIn: www.linkedin.com/in/abhishek-ray-engineer
   * Visionary leader in AI and automation technology
   * Engineering background with deep expertise in AI/ML
   * Passionate about making AI accessible to all businesses
@@ -447,8 +446,7 @@ export async function POST(req) {
         },
         social_links: {
           linkedin: "linkedin.com/company/vectrium-ventures/",
-          instagram: "https://www.instagram.com/vectrium_ventures/profilecard/?igsh=cjh0YXhrZWxmbDg5",
-          ceo_linkedin: "www.linkedin.com/in/abhishek-ray-engineer"
+          instagram: "https://www.instagram.com/vectrium_ventures/profilecard/?igsh=cjh0YXhrZWxmbDg5"
         },
         services: [
           "Advanced AI Agent Development with RAG",
