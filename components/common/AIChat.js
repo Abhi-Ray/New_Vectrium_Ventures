@@ -49,9 +49,9 @@ export default function ChatPage() {
 
   return (
     <div className=" bg-transparent flex items-start justify-center w-full">
-      
+
       <div className="w-full  max-w-4xl relative z-10 ">
-        
+
         {/* Chat Window */}
         <div className="mb-6 p-6 min-h-[65vh] rounded-2xl h-96 overflow-y-auto overflow-x-hidden bg-transparent relative">
           <div className="absolute inset-0 rounded-2xl bg-transparent pointer-events-none"></div>
@@ -71,18 +71,16 @@ export default function ChatPage() {
 
             {messages.map((msg, idx) => (
               <div
-              ref={messagesEndRef}
+                ref={messagesEndRef}
                 key={idx}
-                className={`flex ${
-                  msg.role === "user" ? "justify-end" : "justify-start"
-                }`}
+                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"
+                  }`}
               >
                 <div
-                  className={`max-w-[80%] px-4 py-3 rounded-xl backdrop-blur-lg shadow-lg ${
-                    msg.role === "user"
+                  className={`max-w-[80%] px-4 py-3 rounded-xl backdrop-blur-lg shadow-lg ${msg.role === "user"
                       ? "bg-gradient-to-r from-silver-500/20 to-gray-400/20 text-silver-100"
                       : "bg-gradient-to-r from-black/50 to-gray-900/50 text-gray-200"
-                  }`}
+                    }`}
                 >
                   <div className="prose prose-invert max-w-none break-words" >
                     <ReactMarkdown>{msg.text}</ReactMarkdown>

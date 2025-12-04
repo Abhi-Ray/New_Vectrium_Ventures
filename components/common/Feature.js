@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import createGlobe from "cobe";
 import { motion } from "motion/react";
@@ -104,6 +104,7 @@ export const SkeletonOne = () => {
             alt="AI dashboard"
             width={800}
             height={800}
+            loading="lazy"
             className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
           />
         </div>
@@ -129,6 +130,7 @@ export const SkeletonThree = () => {
             alt="YouTube tutorial"
             width={800}
             height={800}
+            loading="lazy"
             className="h-full w-full aspect-square object-cover object-center rounded-sm group-hover/image:blur-md transition-all duration-200"
           />
         </div>
@@ -139,12 +141,18 @@ export const SkeletonThree = () => {
 
 export const SkeletonTwo = () => {
   const images = [
-   "/img/f1.svg",
-   "/img/f2.png",
-   "/img/f3.gif",
-   "/img/f4.jpeg",
-   "/img/f5.png",
+    "/img/f1.svg",
+    "/img/f2.png",
+    "/img/f3.gif",
+    "/img/f4.jpeg",
+    "/img/f5.png",
   ];
+
+  // Pre-computed rotation values for stable animations
+  const rotations = useMemo(() => ({
+    first: [5, -8, 12, -5, 10],
+    second: [-6, 9, -4, 7, -11]
+  }), []);
 
   const imageVariants = {
     whileHover: { scale: 1.1, rotate: 0, zIndex: 100 },
@@ -158,7 +166,7 @@ export const SkeletonTwo = () => {
           <motion.div
             variants={imageVariants}
             key={"images-first" + idx}
-            style={{ rotate: Math.random() * 20 - 10 }}
+            style={{ rotate: rotations.first[idx], willChange: 'transform' }}
             whileHover="whileHover"
             whileTap="whileTap"
             className="rounded-xl -mr-4 mt-4 p-1 bg-black bg-neutral-800 border border-neutral-700 border-neutral-100 shrink-0 overflow-hidden"
@@ -168,6 +176,7 @@ export const SkeletonTwo = () => {
               alt="AI automation preview"
               width="500"
               height="500"
+              loading="lazy"
               className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover"
             />
           </motion.div>
@@ -177,7 +186,7 @@ export const SkeletonTwo = () => {
         {images.map((image, idx) => (
           <motion.div
             key={"images-second" + idx}
-            style={{ rotate: Math.random() * 20 - 10 }}
+            style={{ rotate: rotations.second[idx], willChange: 'transform' }}
             variants={imageVariants}
             whileHover="whileHover"
             whileTap="whileTap"
@@ -188,6 +197,7 @@ export const SkeletonTwo = () => {
               alt="automation examples"
               width="500"
               height="500"
+              loading="lazy"
               className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover"
             />
           </motion.div>
@@ -214,15 +224,18 @@ export const Globe = ({ className }) => {
     let phi = 0;
     if (!canvasRef.current) return;
 
+    // Use lower DPR for performance - 1 is sufficient for most displays
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+
     const globe = createGlobe(canvasRef.current, {
-      devicePixelRatio: 2,
-      width: 600 * 2,
-      height: 600 * 2,
+      devicePixelRatio: dpr,
+      width: 600 * dpr,
+      height: 600 * dpr,
       phi: 0,
       theta: 0,
       dark: 1,
       diffuse: 1.2,
-      mapSamples: 16000,
+      mapSamples: 8000, // Reduced from 16000 for better performance
       mapBrightness: 6,
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [0.1, 0.8, 1],
@@ -233,7 +246,7 @@ export const Globe = ({ className }) => {
       ],
       onRender: (state) => {
         state.phi = phi;
-        phi += 0.01;
+        phi += 0.005; // Slower rotation for smoother animation
       },
     });
 
@@ -243,7 +256,7 @@ export const Globe = ({ className }) => {
   return (
     <canvas
       ref={canvasRef}
-      style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
+      style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1, willChange: 'transform' }}
       className={className}
     />
   );

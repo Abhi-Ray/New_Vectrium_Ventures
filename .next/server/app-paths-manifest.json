@@ -1,6 +1,10 @@
 {
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/api/interns/route": "app/api/interns/route.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/page": "app/page.js",
-  "/career/page": "app/career/page.js"
+  "/career/page": "app/career/page.js",
+  "/automation/page": "app/automation/page.js",
+  "/ai-agents/page": "app/ai-agents/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/about/page": "app/about/page.js"
 }

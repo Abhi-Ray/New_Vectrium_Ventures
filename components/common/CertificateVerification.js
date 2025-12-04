@@ -85,49 +85,49 @@ function StatsCounter({ value, label, suffix = "+" }) {
 
 // Certificate search result component
 function SearchResult({ results }) {
-    if (!results || results.length === 0) {
-      return (
-        <Card className="bg-black border border-gray-800 mt-6">
-          <CardContent className="p-6 flex items-center gap-2">
-            <XCircle className="w-5 h-5 text-gray-500" />
-            <span className="text-gray-500 font-semibold">No record found</span>
+  if (!results || results.length === 0) {
+    return (
+      <Card className="bg-black border border-gray-800 mt-6">
+        <CardContent className="p-6 flex items-center gap-2">
+          <XCircle className="w-5 h-5 text-gray-500" />
+          <span className="text-gray-500 font-semibold">No record found</span>
+        </CardContent>
+      </Card>
+    )
+  }
+
+  return (
+    <div className="mt-6 space-y-4">
+      {results.map((result) => (
+        <Card key={result.ID} className="bg-black border border-gray-800">
+          <CardContent className="p-6">
+            <div className="flex items-center gap-2 mb-4">
+              <CheckCircle className="w-5 h-5 text-gray-300" />
+              <span className="text-gray-300 font-semibold">Certificate Verified</span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <span className="text-gray-400">Name:</span>
+                <span className="ml-2 text-white font-medium">{result.Name}</span>
+              </div>
+              <div>
+                <span className="text-gray-400">College:</span>
+                <span className="ml-2 text-white font-medium">{result.College}</span>
+              </div>
+              <div>
+                <span className="text-gray-400">Duration:</span>
+                <span className="ml-2 text-white font-medium">{result.Duration}</span>
+              </div>
+              <div>
+                <span className="text-gray-400">Field:</span>
+                <span className="ml-2 text-white font-medium">{result.Domain}</span>
+              </div>
+            </div>
           </CardContent>
         </Card>
-      )
-    }
-  
-    return (
-      <div className="mt-6 space-y-4">
-        {results.map((result) => (
-          <Card key={result.ID} className="bg-black border border-gray-800">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <CheckCircle className="w-5 h-5 text-gray-300" />
-                <span className="text-gray-300 font-semibold">Certificate Verified</span>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <span className="text-gray-400">Name:</span>
-                  <span className="ml-2 text-white font-medium">{result.Name}</span>
-                </div>
-                <div>
-                  <span className="text-gray-400">College:</span>
-                  <span className="ml-2 text-white font-medium">{result.College}</span>
-                </div>
-                <div>
-                  <span className="text-gray-400">Duration:</span>
-                  <span className="ml-2 text-white font-medium">{result.Duration}</span>
-                </div>
-                <div>
-                  <span className="text-gray-400">Field:</span>
-                  <span className="ml-2 text-white font-medium">{result.Domain}</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    )
+      ))}
+    </div>
+  )
 }
 
 export default function CertificateVerification() {
@@ -172,11 +172,11 @@ export default function CertificateVerification() {
       setFilteredTableData(graduatesData)
       return
     }
-  
+
     await new Promise((resolve) => setTimeout(resolve, 800))
-  
+
     const lowerQuery = searchQuery.toLowerCase()
-  
+
     const foundResults = graduatesData.filter(
       (grad) =>
         grad.ID.toLowerCase().includes(lowerQuery) ||
@@ -185,7 +185,7 @@ export default function CertificateVerification() {
         grad.Duration.toLowerCase().includes(lowerQuery) ||
         grad.Domain.toLowerCase().includes(lowerQuery)
     )
-  
+
     setSearchResult(foundResults)
     setHasSearched(true)
     setFilteredTableData(foundResults) // Update table to show only matching results
@@ -198,8 +198,8 @@ export default function CertificateVerification() {
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Stats Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 pb-8">
-            <StatsCounter value={500} label="Students Trained" />
-            <StatsCounter value={25} label="Colleges Connected" />
+            <StatsCounter value={1100} label="Students Trained" />
+            <StatsCounter value={35} label="Colleges Connected" />
             <StatsCounter value={10} label="Internship Fields" />
           </div>
 
@@ -226,7 +226,7 @@ export default function CertificateVerification() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="bg-black rounded-lg border border-gray-800 overflow-hidden">
-            <div className="h-[50vh] overflow-y-auto overflow-x-auto">
+            <div className="h-[80vh] overflow-y-auto overflow-x-auto">
               {loading ? (
                 <div className="p-6 text-center text-gray-400">Loading interns...</div>
               ) : (

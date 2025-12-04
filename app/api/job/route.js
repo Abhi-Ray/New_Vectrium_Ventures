@@ -101,6 +101,8 @@ export async function POST(req) {
       duration: Array.isArray(fields.duration) ? fields.duration[0] : fields.duration,
       cover: Array.isArray(fields.cover) ? fields.cover[0] : fields.cover,
       applicationType: Array.isArray(fields.applicationType) ? fields.applicationType[0] : fields.applicationType,
+      collegeName: Array.isArray(fields.collegeName) ? fields.collegeName[0] : fields.collegeName,
+      promocode: Array.isArray(fields.promocode) ? fields.promocode[0] : fields.promocode,
     };
 
     // Handle resume file
@@ -121,8 +123,9 @@ export async function POST(req) {
     const [result] = await connection.execute(
       `INSERT INTO career (
         firstname, lastname, email, phone, portfolio, position, 
-        duration, resume_filename, cover, application_type
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        duration, resume_filename, cover, application_type,
+        college_name, promocode
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         formData.firstname,
         formData.lastname,
@@ -134,6 +137,8 @@ export async function POST(req) {
         resumeFilename,
         formData.cover || null,
         formData.applicationType,
+        formData.collegeName || null,
+        formData.promocode || null,
       ]
     );
     await connection.end();
@@ -149,7 +154,11 @@ export async function POST(req) {
         <li><strong>Phone:</strong> ${formData.phone || 'Not provided'}</li>
         <li><strong>Portfolio/LinkedIn:</strong> ${formData.portfolio || 'Not provided'}</li>
         <li><strong>Position:</strong> ${formData.position}</li>
-        ${isInternship ? `<li><strong>Duration:</strong> ${formData.duration || 'Not specified'}</li>` : ''}
+        ${isInternship ? `
+          <li><strong>Duration:</strong> ${formData.duration || 'Not specified'}</li>
+          <li><strong>College Name:</strong> ${formData.collegeName || 'Not provided'}</li>
+          <li><strong>Promocode:</strong> ${formData.promocode || 'None'}</li>
+        ` : ''}
       </ul>
       ${formData.cover ? `<h3>Cover Letter:</h3><p>${formData.cover.replace(/\n/g, '<br>')}</p>` : ''}
       ${resumeFilename

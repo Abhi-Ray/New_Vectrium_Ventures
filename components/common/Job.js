@@ -13,6 +13,8 @@ export function Job({ value = 'job' }) {
     portfolio: "",
     position: "",
     duration: "", // added for internship
+    collegeName: "", // added for internship
+    promocode: "", // added for internship
     resume: null,
     cover: ""
   });
@@ -82,7 +84,7 @@ export function Job({ value = 'job' }) {
           name: 'Vectrium Ventures Pvt Ltd Pvt. Ltd.',
           description: `${formData.duration} Internship Registration Fee`,
           image: "/img/logo.png",
-          theme: { 
+          theme: {
             color: "#000000", // Dominant black
             backdrop_color: "linear-gradient(135deg, #000000, #0a1f44)" // Dark blue gradient
           },
@@ -146,6 +148,8 @@ export function Job({ value = 'job' }) {
                   portfolio: '',
                   position: '',
                   duration: '',
+                  collegeName: '',
+                  promocode: '',
                   resume: null,
                   cover: '',
                 });
@@ -207,6 +211,8 @@ export function Job({ value = 'job' }) {
           portfolio: "",
           position: "",
           duration: "",
+          collegeName: "",
+          promocode: "",
           resume: null,
           cover: "",
         });
@@ -257,7 +263,7 @@ export function Job({ value = 'job' }) {
               <div className="space-y-2">
                 <label className="text-gray-300 text-sm font-medium flex items-center gap-2">
                   <User size={16} />
-                  First Name
+                  First Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -274,7 +280,7 @@ export function Job({ value = 'job' }) {
               <div className="space-y-2">
                 <label className="text-gray-300 text-sm font-medium flex items-center gap-2">
                   <User size={16} />
-                  Last Name
+                  Last Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -292,7 +298,7 @@ export function Job({ value = 'job' }) {
             <div className="space-y-2">
               <label className="text-gray-300 text-sm font-medium flex items-center gap-2">
                 <Mail size={16} />
-                Email Address
+                Email Address <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -309,7 +315,7 @@ export function Job({ value = 'job' }) {
             <div className="space-y-2">
               <label className="text-gray-300 text-sm font-medium flex items-center gap-2">
                 <Phone size={16} />
-                Phone Number
+                Whatsapp Number <span className="text-red-500">*</span>
               </label>
               <input
                 type="tel"
@@ -327,7 +333,7 @@ export function Job({ value = 'job' }) {
             <div className="space-y-2">
               <label className="text-gray-300 text-sm font-medium flex items-center gap-2">
                 <Link size={16} />
-                LinkedIn / Portfolio
+                LinkedIn / Portfolio (Optional)
               </label>
               <input
                 type="url"
@@ -347,7 +353,7 @@ export function Job({ value = 'job' }) {
                 className="text-gray-300 text-sm font-medium flex items-center gap-2"
               >
                 <Briefcase size={16} />
-                Position Applying For
+                Position Applying For <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -363,38 +369,73 @@ export function Job({ value = 'job' }) {
 
             {/* Internship Duration - only for internships */}
             {value === 'internship' && (
-              <div className="space-y-2">
-                <label
-                  htmlFor="duration"
-                  className="text-gray-300 text-sm font-medium flex items-center gap-2"
-                >
-                  <FileText size={16} />
-                  Internship Duration
-                </label>
-                <select
-                  id="duration"
-                  name="duration"
-                  value={formData.duration}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-black/60 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-gray-500/20 focus:outline-none"
-                >
-                  <option value="" disabled>
-                    Select duration
-                  </option>
-                  <option value="1 month">1 month</option>
-                  <option value="2 months">2 months</option>
-                  <option value="3 months">3 months</option>
-                  <option value="6 months">6 months</option>
-                </select>
-              </div>
+              <>
+                <div className="space-y-2">
+                  <label
+                    htmlFor="duration"
+                    className="text-gray-300 text-sm font-medium flex items-center gap-2"
+                  >
+                    <FileText size={16} />
+                    Internship Duration <span className="text-red-500">*</span>
+                  </label>
+                  <select
+                    id="duration"
+                    name="duration"
+                    value={formData.duration}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-black/60 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-gray-500/20 focus:outline-none"
+                  >
+                    <option value="" disabled>
+                      Select duration
+                    </option>
+                    <option value="1 month">1 month</option>
+                    <option value="2 months">2 months</option>
+                    <option value="3 months">3 months</option>
+                    <option value="6 months">6 months</option>
+                  </select>
+                </div>
+
+                {/* College Name */}
+                <div className="space-y-2">
+                  <label className="text-gray-300 text-sm font-medium flex items-center gap-2">
+                    <Briefcase size={16} />
+                    College Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="collegeName"
+                    value={formData.collegeName}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-black/60 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-gray-500/20 focus:outline-none"
+                    placeholder="Enter your college name"
+                  />
+                </div>
+
+                {/* Promocode */}
+                <div className="space-y-2">
+                  <label className="text-gray-300 text-sm font-medium flex items-center gap-2">
+                    <FileText size={16} />
+                    Promocode (Optional)
+                  </label>
+                  <input
+                    type="text"
+                    name="promocode"
+                    value={formData.promocode}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-black/60 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-gray-500/20 focus:outline-none"
+                    placeholder="Enter promocode if any"
+                  />
+                </div>
+              </>
             )}
 
             {/* Resume Upload */}
             <div className="space-y-2">
               <label className="text-gray-300 text-sm font-medium flex items-center gap-2">
                 <FileText size={16} />
-                Upload Resume (PDF)
+                Upload Resume (PDF) <span className="text-red-500">*</span>
               </label>
               <input
                 type="file"
@@ -410,7 +451,7 @@ export function Job({ value = 'job' }) {
             <div className="space-y-2">
               <label className="text-gray-300 text-sm font-medium flex items-center gap-2">
                 <FileText size={16} />
-                Cover Letter / Short Bio
+                Cover Letter / Short Bio <span className="text-red-500">*</span>
               </label>
               <textarea
                 name="cover"

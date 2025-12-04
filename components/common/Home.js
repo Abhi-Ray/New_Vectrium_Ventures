@@ -17,11 +17,11 @@ export function Home() {
             Powerful AI tools, agentic automation, and smart agents working together to simplify your tasks and boost results.
           </p>
         </div>
-      <BackgroundBeams />
+        <BackgroundBeams />
 
       </div>
       <AIChat />
-    
+
     </div>
   );
 }

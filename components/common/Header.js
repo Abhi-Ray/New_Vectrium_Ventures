@@ -248,11 +248,11 @@ const Header = () => {
                             <span className="text-white text-sm font-semibold">
                               {session?.user?.name
                                 ? session.user.name
-                                    .split(" ")
-                                    .map((n) => n[0])
-                                    .join("")
-                                    .toUpperCase()
-                                    .slice(0, 2)
+                                  .split(" ")
+                                  .map((n) => n[0])
+                                  .join("")
+                                  .toUpperCase()
+                                  .slice(0, 2)
                                 : "U"}
                             </span>
                           )}
@@ -337,19 +337,16 @@ const Header = () => {
             >
               <div className="relative w-6 h-6 flex items-center justify-center">
                 <span
-                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? "rotate-45 translate-y-0" : "-translate-y-1.5"
-                  }`}
+                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${isMenuOpen ? "rotate-45 translate-y-0" : "-translate-y-1.5"
+                    }`}
                 />
                 <span
-                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? "opacity-0" : "opacity-100"
-                  }`}
+                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${isMenuOpen ? "opacity-0" : "opacity-100"
+                    }`}
                 />
                 <span
-                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? "-rotate-45 translate-y-0" : "translate-y-1.5"
-                  }`}
+                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${isMenuOpen ? "-rotate-45 translate-y-0" : "translate-y-1.5"
+                    }`}
                 />
               </div>
             </button>
@@ -358,17 +355,15 @@ const Header = () => {
 
         {/* Mobile Navigation Menu - Vercel Style */}
         <div
-          className={`md:hidden fixed inset-x-0 top-16 z-50 transition-all duration-300 ease-out ${
-            isMenuOpen
-              ? "opacity-100 translate-y-0 pointer-events-auto"
-              : "opacity-0 -translate-y-4 pointer-events-none"
-          }`}
+          className={`md:hidden fixed inset-x-0 top-16 z-50 transition-all duration-300 ease-out ${isMenuOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-4 pointer-events-none"
+            }`}
         >
           {/* Backdrop */}
           <div
-            className={`fixed inset-0 bg-black/20 backdrop-blur-sm transition-opacity duration-300 ${
-              isMenuOpen ? "opacity-100" : "opacity-0"
-            }`}
+            className={`fixed inset-0 bg-black/20 backdrop-blur-sm transition-opacity duration-300 ${isMenuOpen ? "opacity-100" : "opacity-0"
+              }`}
             onClick={() => setIsMenuOpen(false)}
           />
 
@@ -467,11 +462,11 @@ const Header = () => {
                             <span className="text-white text-sm font-semibold">
                               {session?.user?.name
                                 ? session.user.name
-                                    .split(" ")
-                                    .map((n) => n[0])
-                                    .join("")
-                                    .toUpperCase()
-                                    .slice(0, 2)
+                                  .split(" ")
+                                  .map((n) => n[0])
+                                  .join("")
+                                  .toUpperCase()
+                                  .slice(0, 2)
                                 : "U"}
                             </span>
                           )}

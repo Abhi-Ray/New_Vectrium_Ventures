@@ -2,16 +2,21 @@
 
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
-export const ThreeDMarquee = ({
+import { useMemo, memo } from "react";
+
+export const ThreeDMarquee = memo(({
   images,
   className
 }) => {
-  // Split the images array into 4 equal parts
-  const chunkSize = Math.ceil(images.length / 4);
-  const chunks = Array.from({ length: 4 }, (_, colIndex) => {
-    const start = colIndex * chunkSize;
-    return images.slice(start, start + chunkSize);
-  });
+  // Memoize chunk calculation to prevent recalculation on every render
+  const chunks = useMemo(() => {
+    const chunkSize = Math.ceil(images.length / 4);
+    return Array.from({ length: 4 }, (_, colIndex) => {
+      const start = colIndex * chunkSize;
+      return images.slice(start, start + chunkSize);
+    });
+  }, [images]);
+
   return (
     <div
       className={cn(
@@ -19,10 +24,11 @@ export const ThreeDMarquee = ({
         className
       )}>
       <div className="flex size-full items-center justify-center">
-        <div className="size-[1720px] shrink-0 scale-50 sm:scale-75 lg:scale-100">
+        <div className="size-[1720px] shrink-0 scale-50 sm:scale-75 lg:scale-100" style={{ willChange: 'transform' }}>
           <div
             style={{
               transform: "rotateX(55deg) rotateY(0deg) rotateZ(-45deg)",
+              willChange: 'transform'
             }}
             className="relative top-96 right-[50%] grid size-full origin-top-left grid-cols-4 gap-8 transform-3d">
             {chunks.map((subarray, colIndex) => (
@@ -32,9 +38,11 @@ export const ThreeDMarquee = ({
                   duration: colIndex % 2 === 0 ? 10 : 15,
                   repeat: Infinity,
                   repeatType: "reverse",
+                  ease: "linear"
                 }}
                 key={colIndex + "marquee"}
-                className="flex flex-col items-start gap-8">
+                className="flex flex-col items-start gap-8"
+                style={{ willChange: 'transform' }}>
                 <GridLineVertical className="-left-4" offset="80px" />
                 {subarray.map((image, imageIndex) => (
                   <div className="relative" key={imageIndex + image}>
@@ -52,7 +60,8 @@ export const ThreeDMarquee = ({
                       alt={`Image ${imageIndex + 1}`}
                       className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl"
                       width={970}
-                      height={700} />
+                      height={700}
+                      loading="lazy" />
                   </div>
                 ))}
               </motion.div>
@@ -62,7 +71,7 @@ export const ThreeDMarquee = ({
       </div>
     </div>
   );
-};
+});
 
 const GridLineHorizontal = ({
   className,
