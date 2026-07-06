@@ -128,6 +128,7 @@ const Header = () => {
     { name: "AI Tools", href: "/ai-tools" },
     { name: "Automation", href: "/automation" },
     { name: "AI Agents", href: "/ai-agents" },
+    { name: "Amazon Growth", href: "/amazon-growth" },
     { name: "Career", href: "/career" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
